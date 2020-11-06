@@ -1,0 +1,60 @@
+
+<html>  
+  
+     <head>  
+          <title>  
+               language transliteration  
+          </title>  
+          <script type="text/javascript" src="http://www.google.com/jsapi"></script>  
+          <script type="text/javascript">  
+          google.load("elements",  
+               "1", {  
+                    packages: "transliteration"  
+               });  
+  
+          function onLoad() {  
+               var options = {  
+                    sourceLanguage: google.elements.transliteration.LanguageCode.ENGLISH,  
+                    destinationLanguage: google.elements.transliteration.LanguageCode.KANNADA,  
+                    shortcutKey: 'ctrl+g',  
+                    transliterationEnabled: true  
+               };  
+               var control = new google.elements.transliteration.TransliterationControl(options);  
+               control.makeTransliteratable(['transliterateTextarea']);  
+          }  
+          google.setOnLoadCallback(onLoad);  
+          </script>  
+     </head>  
+     <body>    
+<div class="base" align="center">    
+<table class="standard"  width="1200">    
+<tbody>    
+<tr>    
+<td class="mainPanel">    
+<table>    
+<tbody>    
+<tr>    
+<td vAlign="top"width="800">    
+<table cellPadding="5">    
+<tbody>    
+<tr>    
+<td>    
+<form name="convarea" action="" ID="Form1">    
+ <table ID="Table2">    
+ <tr>    
+ <td align="center">    
+<textarea id="transliterateTextarea" style="width: 550px; height: 220px" name="DraftxData"></textarea>    
+</td>    
+</tr>    
+ <tr>    
+ <td style="color:Gray">    
+(Press    
+Ctrl+g to toggle between English and    
+kannada)    
+</td>    
+</tr>    
+</table>    
+ </form>    
+ </div>    
+</body>    
+</html>   
